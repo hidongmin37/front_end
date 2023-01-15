@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <!--hobby-->
+        <div>
+            취미 :
+            <select>
+                <!--축구를 선택하면 select값이 0이되고,등산을 선택하면 1, 클라이밍을 하면 2-->
+                <option value="0">축구</option>
+                <option value="1">등산</option>
+                <option value="2">클라이밍</option>
+                <option value="3">풋살</option>
+            </select>
+        </div>
+        <div>
+            <!--name이 같아야 하나의 radio로 묶임 하나만 선택가능 -->
+            <input type="radio" name="gender" value="0" id="female"/>
+            <label for="female">여성</label>
+            <!--id속성과 for가 같으므로써 연결이 된 것 여성만 클릭해도 input에 적용이 됨-->
+            <input type="radio" name="gender" value="1"/>남성
+            <input type="radio" name="gender" value="2"/>비공개
+        </div>
+        <div>
+            <!--checkbox는 다중 선택이 가능하며, 조회했을 시에 해당 checkbox가 선택되어 있는 값을 모두 불러옴 id랑 class로 -->
+            가족관계 : 
+            <input type="checkbox" value="0"/> 본인
+            <input type="checkbox" value="1"/> 부모 
+            <input type="checkbox" value="2"/> 형제
+        </div>
+
+        <!--gender-->
+        <!--family-->
+    </div>
+</body>
+</html>
