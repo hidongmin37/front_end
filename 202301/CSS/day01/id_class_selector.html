@@ -1,48 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>id_class_선택자</title>
     <style>
-        .small-font {
-            font-size: 12px;
-        }
-        .big-font {
-            font-size: 24px;
-        }
-        .red-text {
-            color: red;
-        }
-        .font-bold {
-            font-weight: bold;
-        }
+      .small-font {
+        font-size: 12px;
+      }
+      .big-font {
+        font-size: 24px;
+      }
+      .red-text {
+        color: red;
+      }
+      .font-bold {
+        font-weight: bold;
+        color: blue;
+      }
+      #red-text {
+        color: red;
+      }
     </style>
-</head>
-<body>
-    <header>
-        HEADER
-    </header>
+  </head>
+  <body>
+    <header>HEADER</header>
     <main>
-        <h2>
-            ID/CLASS 선택자
-        </h2>
-        <p class="small-font">
-            Lorem ipsum dolor <span id="red-text" class="font-bold">sit amet, consectetur adipisicing elit.</span> 
-            Voluptates expedita praesentium maiores. 
-            Iste blanditiis molestiae culpa minus animi rem distinctio magni tempora exercitationem possimus voluptate quis similique, 
-            provident, <span class="red-text big-font">harum reprehenderit?</span>
-        </p>
-        <p class="big-font">
-            Lorem ipsum dolor <span>sit amet, consectetur adipisicing elit.</span> 
-            Voluptates expedita praesentium maiores. 
-            Iste blanditiis molestiae culpa minus animi rem distinctio magni tempora exercitationem possimus voluptate quis similique, 
-            provident, <harum class="red-text font-bold">harum reprehenderit?</span>
-        </p>
+      <h2>ID/CLASS 선택자</h2>
+      <p class="small-font">
+        Lorem ipsum dolor
+        <span id="red-text" class="font-bold"
+          >sit amet, consectetur adipisicing elit.</span
+        >
+        Voluptates expedita praesentium maiores. Iste blanditiis molestiae culpa
+        minus animi rem distinctio magni tempora exercitationem possimus
+        voluptate quis similique, provident,
+        <span class="red-text big-font">harum reprehenderit?</span>
+      </p>
+      <p class="big-font">
+        Lorem ipsum dolor
+        <span>sit amet, consectetur adipisicing elit.</span> Voluptates expedita
+        praesentium maiores. Iste blanditiis molestiae culpa minus animi rem
+        distinctio magni tempora exercitationem possimus voluptate quis
+        similique, provident,
+        <span class="red-text font-bold">harum reprehenderit?</span>
+      </p>
     </main>
-    <footer>
-
-    </footer>
-</body>
+    <footer></footer>
+  </body>
 </html>
