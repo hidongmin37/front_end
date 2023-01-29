@@ -1,0 +1,22 @@
+p > a {
+  color: red;
+}
+header > p > a {
+  color: blue;
+}
+
+/* header */
+
+header > .nav > p {
+  color: azure;
+}
+
+header > .nav > #content {
+  color: aqua;
+}
+
+/* container */
+
+#container > div {
+  width: 300px;
+}
