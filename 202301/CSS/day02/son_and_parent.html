@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>son_and_parent</title>
+    <style>
+      ul a {
+        text-decoration: none;
+      }
+      /* ul 태그 아래에 있는 모든 a태그 */
+      ul > a {
+        color: cornflowerblue;
+      }
+      /* 자식만 한 탭안으로 있는 것만 네이버만 적용 */
+      ul > li > a {
+        color: deeppink;
+      }
+      ul > li > p > a {
+        color: darkviolet;
+      }
+      ul li a {
+        color: red;
+      }
+      ul li > p > a {
+        color: blue;
+      }
+      /* 우선순위가 같을 때에는 나중에 온게 덮는다. */
+      /* 자손인가 자식인가는 중요하지 않고, 깊이만 중요 */
+    </style>
+  </head>
+  <body>
+    <h2>자식 자손 선택자</h2>
+    <ul>
+      <a href="#">네이버</a>
+      <li>
+        <a href="#">다음</a>
+      </li>
+
+      <li>
+        <p>
+          <a href="">구글</a>
+        </p>
+      </li>
+    </ul>
+  </body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pseudo-elements</title>
+  </head>
+  <style>
+    [type='text'] {
+      color: blue;
+      text-align: center; /* 가운데 정렬 */
+    }
+    [type='text']::placeholder {
+      color: red;
+    }
+    /* placeholder도 왼쪽 정렬이 아닌 가운데 정렬*/
+    [type='text']:focus {
+      background-color: black;
+    }
+    a {
+      text-align: none;
+    }
+    [href]:visited {
+      color: green;
+    }
+    [href]:hover {
+      color: darkviolet;
+    }
+    ul > li {
+      list-style: none; /*리스트의 반점 삭제*/
+    }
+    ul > li::after {
+      content: ' |';
+    }
+    ul > li:last-of-type::after {
+      content: '';
+    }
+  </style>
+  <body>
+    <h2>가상요소 선택자</h2>
+    <input type="text" placeholder="텍스트를 입력해주세요" />
+    <a href="https://www.naver.com">네이&nbsp;&nbsp;&nbsp;&nbsp;<br />버로 이동</a>
+    <ul>
+      <li>로그인</li>
+      <li>회원가입</li>
+    </ul>
+  </body>
+</html>
