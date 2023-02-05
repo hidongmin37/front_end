@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .content {
+        border: 3px dashed #ff0000;
+        width: 600px;
+        padding: 10px;
+        white-space: nowrap;
+        /* defualt값은 wrap */
+
+        overflow: hidden;
+        /* 넘어간건 안보이게두겠다 */
+        text-overflow: ellipsis;
+        /* 말줄임표로 됨 */
+        /* pre 사용자가 입력한 줄바꿈이나 띄어쓰기를 그대로 반영 */
+      }
+      .content:hover {
+        overflow: visible;
+        white-space: unset;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>TEXT-OVERFLOW</h2>
+    <p class="content">
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo neque quasi consequuntur,
+      ab obcaecati delectus, cumque nobis maxime doloribus doloremque laborum asperiores id?
+      Voluptas sint, illo vel necessitatibus nobis voluptatum. Lorem ipsum dolor sit, amet
+      consectetur adipisicing elit. Quisquam est quidem praesentium ratione aut commodi, porro
+      perferendis dolorem repellendus nisi consequatur saepe voluptates voluptatibus in numquam?
+      Maiores, dolorem distinctio! Itaque.
+    </p>
+  </body>
+</html>

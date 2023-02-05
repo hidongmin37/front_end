@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /> -->
+    <!-- <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    /> -->
+    <style>
+      /* @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap'); */
+      /* import보다는 link가 더 나음 */
+      @font-face {
+        font-family: 'noto';
+        src: url('./font/NotoSansKR-Black.otf') format('opentype');
+        /* 파일 경로 그대로 넣으면 됨 */
+      }
+      /* ttf와 otf 거의 모든 브라우저에 적용
+      woff,woff2는 모든 브라우저에 적용되지는 않음  */
+      * {
+        font-family: 'noto';
+      }
+    </style>
+    <title>font</title>
+  </head>
+  <body>
+    <!-- font-family 
+    웹 사이트 제작 시 기본 폰트는 굉장히 부자연스럽다
+-->
+    <p>hello,this is noto-sans font.</p>
+    <p style="font-size: 48px">this is changed.</p>
+    <p style="font-weight: bold">this is changed.</p>
+    <!-- font-weight 기본값 400 가장큰 값은 900 -->
+    <p style="font-size: 48px; font-weight: 900">this is changed.</p>
+    <p style="font-weight: 100">this is changed.</p>
+    <!-- font-weight 100~900
+    100-thin
+    400-default
+    700-bold
+    900 -extrabold -->
+  </body>
+</html>
