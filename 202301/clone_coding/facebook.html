@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>facebook</title>
+
+    <style>
+    
+      @font-face {
+        font-family: 'KalavikaBold';
+        src: url('./facebook_font/KlavikaBoldBold.otf') format('opentype');
+        /* 파일 경로 그대로 넣으면 됨 */
+      }
+      hr {
+    background:rgb(230,230,230);
+    height:1px;
+    border:0;
+}
+    body{
+        background-color: #f0f0f0ff;
+        height: 800px;
+        margin:0;
+}
+
+     .main{
+        min-height: calc(100% - 100px);
+     }
+      footer{
+        background-color: white;
+        height: 100px;
+        margin-left:0px;
+        margin-right:0px;
+        
+      }
+      .id_container {
+        display: flex;
+        padding-top: 150px;
+        margin-left: 200px;
+        margin-right: 150px;
+
+      }
+      #logo {
+        font-size: 60px;
+        color: #0066ff;
+        font-family: 'KalavikaBold';
+        font-weight: 500;
+        margin-top: 0;
+        margin-bottom: 0;
+    
+      }
+      #logo_bottom {
+        margin-top: 20px;
+        margin-bottom: 0;
+        font-size: 25px;
+    
+      }
+      .left{
+        margin-right: 120px;
+        margin-top:80px;
+        width: 400px;
+      }
+      .right{
+        width: 400px;
+        flex-direction: row;
+        background-color: white;
+        border-radius: 11px;
+        padding: 12px;
+        box-shadow: 1px 1px 1px 1px rgb(169, 168, 168,0.4);
+      }
+      .right_inner{
+        text-align: center;
+        margin-top: 12px;
+      }
+      .right_inner > input{
+        width: 90%;
+        height: 40px;
+        padding-left: 12px;
+      }
+      .right_inner > input::placeholder{
+        color: gray;
+        font-size: 15px;
+    
+      }
+    
+#login{
+    background-color: #1877F2;
+    color: white;
+    border-radius: 5px;
+    padding-top:12px;
+    padding-bottom:12px;
+    font-weight: 600;
+    width: 95.6%;
+    text-align: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.footer-background{
+    background-color: white;
+    height: 80px;
+}
+/* #42B72A */
+     
+    </style>
+  </head>
+  <body>
+    <header></header>
+    <div class="main">
+      <div class="id_container">
+        <div class="left">
+          <p id="logo">facebook</p>
+          <p id="logo_bottom">
+            Facebook에서 전세계에 있는 친구, 가족, 지인들과 함께 이야기를 나눠보세요.
+          </p>
+        </div>
+        <div >
+            <div class="right">
+                <div class="right_inner">
+                    <input type="text" style="border:1px solid rgb(230, 230, 230);border-radius: 4px;"  placeholder="이메일 또는 전화번호" />
+                </div>
+                <div class="right_inner">
+                    <input type="password" style="border:1px solid rgb(230, 230, 230);border-radius: 4px;"  placeholder="비밀번호" />
+                </div>
+                <div class="right_inner" id="login">
+                    <a>로그인</a>
+                </div>
+                <div class="right_inner" style="border-bottom-width: 1px; border-bottom-color: gray;">
+                    <a href="#" style="text-decoration: none; font-size: 12px; color:#1877F2;font-weight: 600;">비밀번호를 잊으셨나요?</a>
+                </div>
+                <hr>
+                <div class="right_inner" style="background-color: #42B72A; color:white; border-radius: 4px; width: 35%; margin:0px auto; padding-top: 18px; padding-bottom:18px; margin-top: 20px;">
+                    <a >새 계정 만들기</a>
+                </div>
+            </div>
+            <div class="center-outer">
+                <p style="font-size:14px; text-align: center;">유명인, 브랜드 또는 비즈니스를 위한 <span style="font-weight:600;">페이지 만들기</span>.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+        </div>
+    </div>
+
+    </div>
+    <footer>
+   
+
+    </footer>
+  </body>
+ 
+</html>
