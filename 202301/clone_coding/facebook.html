@@ -7,39 +7,39 @@
     <title>facebook</title>
 
     <style>
-    
       @font-face {
         font-family: 'KalavikaBold';
         src: url('./facebook_font/KlavikaBoldBold.otf') format('opentype');
         /* 파일 경로 그대로 넣으면 됨 */
       }
       hr {
-    background:rgb(230,230,230);
-    height:1px;
-    border:0;
-}
-    body{
+        background: rgb(230, 230, 230);
+        height: 1px;
+        border: 0;
+      }
+      body {
         background-color: #f0f0f0ff;
         height: 800px;
-        margin:0;
-}
+        margin: 0;
+      }
 
-     .main{
-        min-height: calc(100% - 100px);
-     }
-      footer{
+      footer {
         background-color: white;
         height: 100px;
-        margin-left:0px;
-        margin-right:0px;
-        
+        margin-left: 0px;
+        margin-right: 0px;
+      }
+      main {
+        text-align: center;
       }
       .id_container {
-        display: flex;
-        padding-top: 150px;
-        margin-left: 250px;
-        margin-right: 150px;
+        @media (min-width: 900px) {
+          display: flex;
+        }
+        display: inline-block;
 
+        padding-top: 150px;
+        min-height: calc(100% - 100px);
       }
       #logo {
         font-size: 60px;
@@ -48,92 +48,86 @@
         font-weight: 500;
         margin-top: 0;
         margin-bottom: 0;
-    
       }
       #logo_bottom {
         margin-top: 20px;
         margin-bottom: 0;
         font-size: 25px;
-    
       }
-      .left{
+      .left {
         margin-right: 120px;
-        margin-top:80px;
+        margin-top: 80px;
         width: 400px;
       }
-      .right{
+      .right {
         width: 400px;
         flex-direction: row;
         background-color: white;
         border-radius: 11px;
         padding: 12px;
-        box-shadow: 1px 1px 1px 1px rgb(169, 168, 168,0.4);
+        box-shadow: 1px 1px 1px 1px rgb(169, 168, 168, 0.4);
       }
-      .right_inner{
+      .right_inner {
         text-align: center;
         margin-top: 12px;
       }
-      .right_inner > input{
+      .right_inner > input {
         width: 90%;
         height: 40px;
         padding-left: 12px;
       }
-      .right_inner > input::placeholder{
+      .right_inner > input::placeholder {
         color: gray;
         font-size: 15px;
-    
       }
-    
-#login{
-    background-color: #1877F2;
-    color: white;
-    border-radius: 5px;
-    padding-top:12px;
-    padding-bottom:12px;
-    font-weight: 600;
-    width: 95.6%;
-    text-align: center;
-    justify-content: center;
-    margin-left: auto;
-    margin-right: auto;
-    font-size: 20px;
-    border: 0px;
-}
-#login:hover{
-    background-color: #075ed0;
-}
-.center-outer > a[href]:visited {
-    text-decoration: none;
-    color: black;
-}
 
-.footer-background{
-    background-color: white;
-    height: 80px;
-    width: 100%;
+      #login {
+        background-color: #1877f2;
+        color: white;
+        border-radius: 5px;
+        padding-top: 12px;
+        padding-bottom: 12px;
+        font-weight: 600;
+        width: 95.6%;
+        text-align: center;
+        justify-content: center;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 20px;
+        border: 0px;
+      }
+      #login:hover {
+        background-color: #075ed0;
+      }
+      .center-outer > a[href]:visited {
+        text-decoration: none;
+        color: black;
+      }
 
-}
-ul > ol {
-    padding-left: 0px;
-    padding-right:10px;
-    vertical-align: top;
-    text-align: -webkit-match-parent;
-    align-self: auto;
-    display: inline-block;
-}
-ul { 
-    display: block;
-    list-style-type: disc;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    padding-inline-start: 40px;
-    flex-wrap: wrap;
-
-}
-/* #42B72A */
-     
+      .footer-background {
+        background-color: white;
+        height: 80px;
+        width: 100%;
+      }
+      ul > ol {
+        padding-left: 0px;
+        padding-right: 10px;
+        vertical-align: top;
+        text-align: -webkit-match-parent;
+        align-self: auto;
+        display: inline-block;
+      }
+      ul {
+        display: block;
+        list-style-type: disc;
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        padding-inline-start: 40px;
+        flex-wrap: wrap;
+      }
+      /* #42B72A */
     </style>
   </head>
   <body>
@@ -146,109 +140,196 @@ ul {
             Facebook에서 전세계에 있는 친구, 가족, 지인들과 함께 이야기를 나눠보세요.
           </p>
         </div>
-        <div >
-            <div class="right">
-                <div class="right_inner">
-                    <input type="text" style="border:1px solid rgb(230, 230, 230);border-radius: 4px;"  placeholder="이메일 또는 전화번호" />
-                </div>
-                <div class="right_inner">
-                    <input type="password" style="border:1px solid rgb(230, 230, 230);border-radius: 4px;"  placeholder="비밀번호" />
-                </div>
-                <div class="right_inner" >
-                    <button id="login" type="submit">로그인</button>
-                </div>
-                <div class="right_inner" style="border-bottom-width: 1px; border-bottom-color: gray;">
-                    <a href="#" style="text-decoration: none; font-size: 12px; color:#1877F2;font-weight: 600;">비밀번호를 잊으셨나요?</a>
-                </div>
-                <hr>
-                <div class="right_inner" >
-                    <button type="button" style="background-color: #42B72A; color:white; border-radius: 4px; width: 35%; margin:0px auto; padding-top: 18px; padding-bottom:18px; margin-top: 20px; border: 0px;" >새 계정 만들기</button>
-                </div>
+        <div>
+          <div class="right">
+            <div class="right_inner">
+              <input
+                type="text"
+                style="border: 1px solid rgb(230, 230, 230); border-radius: 4px"
+                placeholder="이메일 또는 전화번호"
+              />
             </div>
-            <div class="center-outer">
-                <p style="font-size:14px; text-align: center;">유명인, 브랜드 또는 비즈니스를 위한 <a href="#" style="font-weight:600; text-decoration: none; color:black ">페이지 만들기</a>.</p>
+            <div class="right_inner">
+              <input
+                type="password"
+                style="border: 1px solid rgb(230, 230, 230); border-radius: 4px"
+                placeholder="비밀번호"
+              />
             </div>
+            <div class="right_inner">
+              <button id="login" type="submit">로그인</button>
+            </div>
+            <div class="right_inner" style="border-bottom-width: 1px; border-bottom-color: gray">
+              <a
+                href="#"
+                style="text-decoration: none; font-size: 12px; color: #1877f2; font-weight: 600"
+                >비밀번호를 잊으셨나요?</a
+              >
+            </div>
+            <hr />
+            <div class="right_inner">
+              <button
+                type="button"
+                style="
+                  background-color: #42b72a;
+                  color: white;
+                  border-radius: 4px;
+                  width: 35%;
+                  margin: 0px auto;
+                  padding-top: 18px;
+                  padding-bottom: 18px;
+                  margin-top: 20px;
+                  border: 0px;
+                "
+              >
+                새 계정 만들기
+              </button>
+            </div>
+          </div>
+          <div class="center-outer">
+            <p style="font-size: 14px; text-align: center">
+              유명인, 브랜드 또는 비즈니스를 위한
+              <a href="#" style="font-weight: 600; text-decoration: none; color: black"
+                >페이지 만들기</a
+              >.
+            </p>
+          </div>
         </div>
+      </div>
     </div>
-</div>
-
+    <footer style="padding-left: 250px; padding-right: 200px; padding-top: 20px; height: 130px">
+      <div style="width: 980px">
+        <div
+          style="margin-left: 60px; margin-right: 60px; border-bottom: 1px solid rgb(180, 179, 179)"
+        >
+          <ul style="display: flex; font-size: 12px; padding-left: 0px; color: gray">
+            <ol>
+              한국어
+            </ol>
+            <ol>
+              English (US)
+            </ol>
+            <ol>
+              Tiếng Việt
+            </ol>
+            <ol>
+              Bahasa Indonesia
+            </ol>
+            <ol>
+              ภาษาไทย
+            </ol>
+            <ol>
+              Español
+            </ol>
+            <ol>
+              中文(简体)
+            </ol>
+            <ol>
+              日本語
+            </ol>
+            <ol>
+              Português (Brasil)
+            </ol>
+            <ol>
+              Français (France)
+            </ol>
+            <ol>
+              Deutsch
+            </ol>
+          </ul>
         </div>
-    </div>
-
-    </div>
-    <footer style="padding-left:250px; padding-right:200px; padding-top:20px;height: 130px; ">
-        <div style="width:980px;">
-        <div style="margin-left:60px; margin-right: 60px; border-bottom: 1px solid rgb(180, 179, 179);">
-   <ul style="display: flex; font-size: 12px; padding-left: 0px; color: gray;">
-    <ol>
-        한국어
-    </ol>
-    <ol>
-        English (US)
-    </ol>
-    <ol>
-        Tiếng Việt
-    </ol>
-    <ol>
-        Bahasa Indonesia
-    </ol>
-    <ol>
-        ภาษาไทย
-    </ol>
-    <ol>Español
-    </ol>
-    <ol>
-        中文(简体)
-    </ol>
-    <ol>
-        日本語
-    </ol>
-    <ol>
-        Português (Brasil)
-    </ol>
-    <ol>
-        Français (France)
-    </ol>
-    <ol>
-        Deutsch
-    </ol>
-   </ul>
-</div>
-<div style="margin-left:60px; margin-right: 60px;">
-    <ul style="display: flex; font-size: 12px; padding-left: 0px; color: gray;">
-        <ol>가입하기</ol>
-        <ol>로그인</ol>
-        <ol>Messenger</ol>
-        <ol>Facebook Lite</ol>
-        <ol>Watch</ol>
-        <ol>장소</ol>
-        <ol>게임</ol>
-        <ol>Marketplace</ol>
-        <ol>Meta Pay</ol>
-        <ol>Oculus</ol>
-        <ol>Portal</ol>
-        <ol>Instagram</ol>
-        <ol>Bulletin</ol>
-        <ol>기부 캠페인</ol>
-        <ol>서비스</ol>
-        <ol>투표 정보 센터</ol>
-        <ol>개인정보처리방침</ol>
-        <ol>개인정보 보호 센터</ol>
-        <ol>그룹</ol>
-        <ol>정보</ol>
-        <ol>광고 만들기</ol>
-        <ol>페이지 만들기</ol>
-        <ol>개발자</ol>
-        <ol>채용 정보</ol>
-        <ol>쿠키</ol>
-        <ol>AdCoices</ol>
-        <ol>이용 약관</ol>
-        <ol>고객센터</ol>
-        <ol>연락처 업로드 및 비사용자</ol>
-    </ul>
-</div>
-</div>
+        <div style="margin-left: 60px; margin-right: 60px">
+          <ul style="display: flex; font-size: 12px; padding-left: 0px; color: gray">
+            <ol>
+              가입하기
+            </ol>
+            <ol>
+              로그인
+            </ol>
+            <ol>
+              Messenger
+            </ol>
+            <ol>
+              Facebook Lite
+            </ol>
+            <ol>
+              Watch
+            </ol>
+            <ol>
+              장소
+            </ol>
+            <ol>
+              게임
+            </ol>
+            <ol>
+              Marketplace
+            </ol>
+            <ol>
+              Meta Pay
+            </ol>
+            <ol>
+              Oculus
+            </ol>
+            <ol>
+              Portal
+            </ol>
+            <ol>
+              Instagram
+            </ol>
+            <ol>
+              Bulletin
+            </ol>
+            <ol>
+              기부 캠페인
+            </ol>
+            <ol>
+              서비스
+            </ol>
+            <ol>
+              투표 정보 센터
+            </ol>
+            <ol>
+              개인정보처리방침
+            </ol>
+            <ol>
+              개인정보 보호 센터
+            </ol>
+            <ol>
+              그룹
+            </ol>
+            <ol>
+              정보
+            </ol>
+            <ol>
+              광고 만들기
+            </ol>
+            <ol>
+              페이지 만들기
+            </ol>
+            <ol>
+              개발자
+            </ol>
+            <ol>
+              채용 정보
+            </ol>
+            <ol>
+              쿠키
+            </ol>
+            <ol>
+              AdCoices
+            </ol>
+            <ol>
+              이용 약관
+            </ol>
+            <ol>
+              고객센터
+            </ol>
+            <ol>
+              연락처 업로드 및 비사용자
+            </ol>
+          </ul>
+        </div>
+      </div>
     </footer>
   </body>
- 
 </html>

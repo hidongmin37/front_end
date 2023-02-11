@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      @media only screen and (min-width: 900px) {
+        body {
+          padding: 0px;
+          margin: 0px;
+        }
+        .greatest {
+          padding-top: 110px;
+          padding-bottom: 120px;
+
+          height: 80%;
+          background-color: #f0f0f0ff;
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        .main_contents {
+          display: flex;
+          gap: 80px;
+        }
+        .left {
+          padding-top: 40px;
+        }
+        #logo {
+          font-size: 60px;
+          margin: 0;
+          margin-top: 80px;
+          padding: 0;
+          color: #0066ff;
+          font-weight: 800;
+          text-align: left;
+        }
+        #logo_text {
+          font-size: 20px;
+          white-space: nowrap;
+        }
+      }
+      @media only screen and (max-width: 900px) {
+        body {
+          padding: 0px;
+          margin: 0px;
+          text-align: center;
+        }
+        .greatest {
+          height: 80%;
+
+          padding-top: 30px;
+          padding-bottom: 120px;
+          background-color: #f0f0f0ff;
+        }
+        .main_contents {
+          margin: auto;
+        }
+        #logo {
+          font-size: 60px;
+          margin: 0;
+          padding: 0;
+          color: #0066ff;
+          font-weight: 800;
+          text-align: center;
+        }
+        .left {
+          padding-top: 80px;
+        }
+        #logo_text {
+          font-size: 20px;
+          white-space: nowrap;
+        }
+      }
+
+      #right {
+        text-align: center;
+      }
+      .right_inner {
+      }
+      .right_big {
+        background-color: white;
+        margin: auto;
+        display: inline-block;
+        padding: 10px;
+        padding-top: 15px;
+        width: 380px;
+        height: 320px;
+        border-radius: 6px;
+        box-shadow: 3px 3px 3px rgba(120, 115, 115, 0.2);
+      }
+      .right_big > div > input {
+        width: 95%;
+        margin-bottom: 15px;
+        height: 38px;
+        border: 1px solid gainsboro;
+        border-radius: 4px;
+        padding-left: 9px;
+        font-size: 15px;
+      }
+      #login {
+        background-color: #2c72db;
+        font-size: 17px;
+        border: 0px;
+        border-radius: 6px;
+        color: white;
+        padding-left: 135px;
+        padding-right: 135px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        width: 98%;
+        margin-bottom: 22px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="greatest">
+      <div class="main_contents">
+        <div id="left">
+          <p id="logo">facebook</p>
+          <p id="logo_text">
+            Facebook에서 전세계에 있는 친구, 가족, 지인들과 함께 이야기를 나눠보세요.
+          </p>
+        </div>
+        <div id="right">
+          <div class="right_big">
+            <div>
+              <input type="text" placeholder="이메일 또는 전화번호" />
+            </div>
+            <div class="right_inner">
+              <input type="password" placeholder="비밀번호" />
+            </div>
+            <div class="right_inner">
+              <button id="login" type="submit">로그인</button>
+            </div>
+            <div class="right_inner" style="border-bottom-width: 1px; border-bottom-color: gray">
+              <a
+                href="#"
+                style="text-decoration: none; font-size: 14px; color: #1877f2; font-weight: 600"
+                >비밀번호를 잊으셨나요?</a
+              >
+            </div>
+            <hr />
+            <div class="right_inner">
+              <button
+                type="button"
+                style="
+                  background-color: #42b72a;
+                  color: white;
+                  border-radius: 4px;
+                  width: 35%;
+                  margin: 0px auto;
+                  padding-top: 18px;
+                  padding-bottom: 18px;
+                  margin-top: 20px;
+                  border: 0px;
+                "
+              >
+                새 계정 만들기
+              </button>
+            </div>
+          </div>
+          <div class="center-outer">
+            <p style="font-size: 14px; text-align: center">
+              유명인, 브랜드 또는 비즈니스를 위한
+              <a href="#" style="font-weight: 600; text-decoration: none; color: black"
+                >페이지 만들기</a
+              >.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <div style="background-color: white; height: 20px"></div>
+</html>

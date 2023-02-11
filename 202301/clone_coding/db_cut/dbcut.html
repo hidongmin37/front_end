@@ -1,0 +1,986 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>db_cut</title>
+    <style>
+      a {
+        text-decoration: none;
+      }
+      header {
+        margin: 0px;
+        background-color: rgb(227, 225, 225);
+        height: 40px;
+      }
+
+      body {
+        margin: 0px;
+      }
+      #main {
+        width: 1280px;
+        background-color: wheat;
+        margin-left: 100px;
+        margin-right: 100px;
+        margin-top: 40px;
+        height: 100%;
+      }
+      #top_search {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        padding-top: 5px;
+      }
+      #search_bar {
+        width: 300px;
+        height: 30px;
+        margin-top: 10px;
+        border: 2px solid blue;
+        border-radius: 4px;
+        padding-top: 4px;
+        padding-bottom: 4px;
+        padding-left: 5px;
+      }
+      #faq_list > ol {
+        text-align: center;
+        font-size: 12px;
+        flex-wrap: nowrap;
+        white-space: nowrap;
+        width: 30px;
+        padding-left: 40px;
+      }
+
+      #faq_list > li {
+        width: 50px;
+        display: flex;
+      }
+      /* #faq_list > ol > li > span {
+        padding-left: 20px;
+        padding-bottom: 10px;
+      } */
+      #menu_bar {
+        display: flex;
+        background-color: blue;
+        height: 50px;
+        margin-top: 20px;
+      }
+      #menu_bar_click {
+        width: 50px;
+        height: 50px;
+        background-color: blueviolet;
+      }
+      #menu_bar_list {
+        display: flex;
+        color: white;
+      }
+      #menu_bar_list > div {
+        text-align: center;
+        width: 80px;
+        padding-left: 10px;
+        font-size: 14px;
+      }
+      #main_bottom {
+        display: flex;
+      }
+      .noti_post {
+        line-height: 18px;
+        padding: 0;
+        margin: 4px;
+      }
+      .board_gray {
+        color: rgb(183, 181, 181);
+        margin-right: 8px;
+      }
+      .ranking_numbering {
+        color: white;
+        background-color: gray;
+        padding: 2px;
+      }
+      #ranking > p {
+        padding-bottom: 5px;
+      }
+    </style>
+  </head>
+  <header>
+    <div>
+      <div
+        style="
+          position: absolute;
+          left: 100px;
+          height: 40px;
+          background-color: white;
+          width: 80px;
+          text-align: center;
+        "
+      >
+        <span style="line-height: 40px">커뮤니티</span>
+      </div>
+    </div>
+  </header>
+  <body>
+    <div id="main">
+      <div id="top_search">
+        <div>
+          <img
+            src="https://www.dbcut.com/img/logo.png"
+            alt="디비컷 - 웹디자인 평가 및 우수 웹사이트 모음"
+            title=""
+          />
+        </div>
+        <div>
+          <div><input id="search_bar" type="text" placeholder="검색어를 입력해주세요" /></div>
+        </div>
+        <div>
+          <ul id="faq_list" style="display: flex">
+            <ol>
+              <img src="1_seq.png" style="width: 15px; height: 15px" />
+              <span style="line-height: 19px">FAQ</span>
+            </ol>
+            <ol>
+              <img src="2_seq.png" style="width: 15px; height: 15px" />
+              <span>1:1문의</span>
+            </ol>
+            <ol>
+              <img src="3_seq.png" style="width: 15px; height: 15px" />
+              <span>접속자</span>
+            </ol>
+            <ol>
+              <img src="4_seq.png" style="width: 15px; height: 15px" />
+              <span>새글</span>
+            </ol>
+          </ul>
+        </div>
+      </div>
+      <div id="menu_bar">
+        <div id="menu_bar_click"></div>
+        <div id="menu_bar_list">
+          <div>
+            <p>오픈/리뉴얼</p>
+          </div>
+          <div>
+            <p>외국사이트</p>
+          </div>
+          <div>
+            <p>워드프레스</p>
+          </div>
+          <div>
+            <p>쇼핑몰</p>
+          </div>
+          <div>
+            <p>디렉토리</p>
+          </div>
+          <div>
+            <p>웹에이전시</p>
+          </div>
+          <div>
+            <p>구인정보</p>
+          </div>
+          <div>
+            <p>제작의뢰</p>
+          </div>
+          <div>
+            <p>지식 in</p>
+          </div>
+          <div>
+            <p>포인트 경매</p>
+          </div>
+          <div>
+            <p>커뮤니티</p>
+          </div>
+        </div>
+      </div>
+
+      <div id="main_bottom">
+        <div>
+          <div style="margin-top: 10px">
+            <img
+              src="https://tpc.googlesyndication.com/daca_images/simgad/2177199894766864846"
+              border="0"
+              width="880"
+              alt=""
+              class="img_ad"
+            />
+          </div>
+          <div>
+            <div
+              style="
+                display: flex;
+                background-color: #3498db;
+                gap: 8px;
+                padding-left: 10px;
+                margin-top: 10px;
+              "
+            >
+              <div><p>전체</p></div>
+              <div><p>디자인/광고</p></div>
+              <div><p>그룹/기업</p></div>
+              <div><p>유통/판매</p></div>
+              <div><p>식품/음료</p></div>
+              <div><p>패션/섬유</p></div>
+              <div><p>화장품/미용</p></div>
+              <div><p>화학/생활용품</p></div>
+              <div><p>가구/인테리어</p></div>
+              <div><p>전기/전자</p></div>
+              <div><p>기계/금속</p></div>
+            </div>
+          </div>
+          <div
+            style="
+              display: grid;
+              grid-template-columns: 1fr 1fr 1fr 1fr;
+              gap: 20px;
+              row-gap: 30px;
+              margin-top: 20px;
+            "
+          >
+            <div>
+              <div style="padding: 0; margin-bottom: 0px; height: 60%">
+                <img
+                  src="https://www.dbcut.com/data/file/websites/thumb-77529d4663656fa56a863b5b5b07e3c4_ulZ9jxLS_87b1a924b30ba7e114d984dbe8a004a12763dba7_270x152.png"
+                  alt=""
+                  width="100%"
+                  height="100%"
+                  title=""
+                  style="margin: 0; padding: 0"
+                />
+              </div>
+              <div style="height: 40px; background-color: white; margin-top: 0px"></div>
+              <div style="height: 30px; background-color: gray; margin-top: 0px"></div>
+            </div>
+            <div>
+              <div style="padding: 0; margin-bottom: 0px; height: 60%">
+                <img
+                  src="https://www.dbcut.com/data/file/websites/thumb-77529d4663656fa56a863b5b5b07e3c4_ulZ9jxLS_87b1a924b30ba7e114d984dbe8a004a12763dba7_270x152.png"
+                  alt=""
+                  width="100%"
+                  height="100%"
+                  title=""
+                  style="margin: 0; padding: 0"
+                />
+              </div>
+              <div style="height: 40px; background-color: white; margin-top: 0px"></div>
+              <div style="height: 30px; background-color: gray; margin-top: 0px"></div>
+            </div>
+            <div>
+              <div style="padding: 0; margin-bottom: 0px; height: 60%">
+                <img
+                  src="https://www.dbcut.com/data/file/websites/thumb-77529d4663656fa56a863b5b5b07e3c4_ulZ9jxLS_87b1a924b30ba7e114d984dbe8a004a12763dba7_270x152.png"
+                  alt=""
+                  width="100%"
+                  height="100%"
+                  title=""
+                  style="margin: 0; padding: 0"
+                />
+              </div>
+              <div style="height: 40px; background-color: white; margin-top: 0px"></div>
+              <div style="height: 30px; background-color: gray; margin-top: 0px"></div>
+            </div>
+            <div>
+              <div style="padding: 0; margin-bottom: 0px; height: 60%">
+                <img
+                  src="https://www.dbcut.com/data/file/websites/thumb-77529d4663656fa56a863b5b5b07e3c4_ulZ9jxLS_87b1a924b30ba7e114d984dbe8a004a12763dba7_270x152.png"
+                  alt=""
+                  width="100%"
+                  height="100%"
+                  title=""
+                  style="margin: 0; padding: 0"
+                />
+              </div>
+              <div style="height: 40px; background-color: white; margin-top: 0px"></div>
+              <div style="height: 30px; background-color: gray; margin-top: 0px"></div>
+            </div>
+            <div>
+              <div style="padding: 0; margin-bottom: 0px; height: 60%">
+                <img
+                  src="https://www.dbcut.com/data/file/websites/thumb-77529d4663656fa56a863b5b5b07e3c4_ulZ9jxLS_87b1a924b30ba7e114d984dbe8a004a12763dba7_270x152.png"
+                  alt=""
+                  width="100%"
+                  height="100%"
+                  title=""
+                  style="margin: 0; padding: 0"
+                />
+              </div>
+              <div style="height: 40px; background-color: white; margin-top: 0px"></div>
+              <div style="height: 30px; background-color: gray; margin-top: 0px"></div>
+            </div>
+            <div>
+              <div style="padding: 0; margin-bottom: 0px; height: 60%">
+                <img
+                  src="https://www.dbcut.com/data/file/websites/thumb-77529d4663656fa56a863b5b5b07e3c4_ulZ9jxLS_87b1a924b30ba7e114d984dbe8a004a12763dba7_270x152.png"
+                  alt=""
+                  width="100%"
+                  height="100%"
+                  title=""
+                  style="margin: 0; padding: 0"
+                />
+              </div>
+              <div style="height: 40px; background-color: white; margin-top: 0px"></div>
+              <div style="height: 30px; background-color: gray; margin-top: 0px"></div>
+            </div>
+            <div>
+              <div style="padding: 0; margin-bottom: 0px; height: 60%">
+                <img
+                  src="https://www.dbcut.com/data/file/websites/thumb-77529d4663656fa56a863b5b5b07e3c4_ulZ9jxLS_87b1a924b30ba7e114d984dbe8a004a12763dba7_270x152.png"
+                  alt=""
+                  width="100%"
+                  height="100%"
+                  title=""
+                  style="margin: 0; padding: 0"
+                />
+              </div>
+              <div style="height: 40px; background-color: white; margin-top: 0px"></div>
+              <div style="height: 30px; background-color: gray; margin-top: 0px"></div>
+            </div>
+            <div>
+              <div style="padding: 0; margin-bottom: 0px; height: 60%">
+                <img
+                  src="https://www.dbcut.com/data/file/websites/thumb-77529d4663656fa56a863b5b5b07e3c4_ulZ9jxLS_87b1a924b30ba7e114d984dbe8a004a12763dba7_270x152.png"
+                  alt=""
+                  width="100%"
+                  height="100%"
+                  title=""
+                  style="margin: 0; padding: 0"
+                />
+              </div>
+              <div style="height: 40px; background-color: white; margin-top: 0px"></div>
+              <div style="height: 30px; background-color: gray; margin-top: 0px"></div>
+            </div>
+            <div>
+              <div style="padding: 0; margin-bottom: 0px; height: 60%">
+                <img
+                  src="https://www.dbcut.com/data/file/websites/thumb-77529d4663656fa56a863b5b5b07e3c4_ulZ9jxLS_87b1a924b30ba7e114d984dbe8a004a12763dba7_270x152.png"
+                  alt=""
+                  width="100%"
+                  height="100%"
+                  title=""
+                  style="margin: 0; padding: 0"
+                />
+              </div>
+              <div style="height: 40px; background-color: white; margin-top: 0px"></div>
+              <div style="height: 30px; background-color: gray; margin-top: 0px"></div>
+            </div>
+            <div>
+              <div style="padding: 0; margin-bottom: 0px; height: 60%">
+                <img
+                  src="https://www.dbcut.com/data/file/websites/thumb-77529d4663656fa56a863b5b5b07e3c4_ulZ9jxLS_87b1a924b30ba7e114d984dbe8a004a12763dba7_270x152.png"
+                  alt=""
+                  width="100%"
+                  height="100%"
+                  title=""
+                  style="margin: 0; padding: 0"
+                />
+              </div>
+              <div style="height: 40px; background-color: white; margin-top: 0px"></div>
+              <div style="height: 30px; background-color: gray; margin-top: 0px"></div>
+            </div>
+            <div>
+              <div style="padding: 0; margin-bottom: 0px; height: 60%">
+                <img
+                  src="https://www.dbcut.com/data/file/websites/thumb-77529d4663656fa56a863b5b5b07e3c4_ulZ9jxLS_87b1a924b30ba7e114d984dbe8a004a12763dba7_270x152.png"
+                  alt=""
+                  width="100%"
+                  height="100%"
+                  title=""
+                  style="margin: 0; padding: 0"
+                />
+              </div>
+              <div style="height: 40px; background-color: white; margin-top: 0px"></div>
+              <div style="height: 30px; background-color: gray; margin-top: 0px"></div>
+            </div>
+            <div>
+              <div style="padding: 0; margin-bottom: 0px; height: 60%">
+                <img
+                  src="https://www.dbcut.com/data/file/websites/thumb-77529d4663656fa56a863b5b5b07e3c4_ulZ9jxLS_87b1a924b30ba7e114d984dbe8a004a12763dba7_270x152.png"
+                  alt=""
+                  width="100%"
+                  height="100%"
+                  title=""
+                  style="margin: 0; padding: 0"
+                />
+              </div>
+              <div style="height: 40px; background-color: white; margin-top: 0px"></div>
+              <div style="height: 30px; background-color: gray; margin-top: 0px"></div>
+            </div>
+            <div>
+              <div style="padding: 0; margin-bottom: 0px; height: 60%">
+                <img
+                  src="https://www.dbcut.com/data/file/websites/thumb-77529d4663656fa56a863b5b5b07e3c4_ulZ9jxLS_87b1a924b30ba7e114d984dbe8a004a12763dba7_270x152.png"
+                  alt=""
+                  width="100%"
+                  height="100%"
+                  title=""
+                  style="margin: 0; padding: 0"
+                />
+              </div>
+              <div style="height: 40px; background-color: white; margin-top: 0px"></div>
+              <div style="height: 30px; background-color: gray; margin-top: 0px"></div>
+            </div>
+            <div>
+              <div style="padding: 0; margin-bottom: 0px; height: 60%">
+                <img
+                  src="https://www.dbcut.com/data/file/websites/thumb-77529d4663656fa56a863b5b5b07e3c4_ulZ9jxLS_87b1a924b30ba7e114d984dbe8a004a12763dba7_270x152.png"
+                  alt=""
+                  width="100%"
+                  height="100%"
+                  title=""
+                  style="margin: 0; padding: 0"
+                />
+              </div>
+              <div style="height: 40px; background-color: white; margin-top: 0px"></div>
+              <div style="height: 30px; background-color: gray; margin-top: 0px"></div>
+            </div>
+            <div>
+              <div style="padding: 0; margin-bottom: 0px; height: 60%">
+                <img
+                  src="https://www.dbcut.com/data/file/websites/thumb-77529d4663656fa56a863b5b5b07e3c4_ulZ9jxLS_87b1a924b30ba7e114d984dbe8a004a12763dba7_270x152.png"
+                  alt=""
+                  width="100%"
+                  height="100%"
+                  title=""
+                  style="margin: 0; padding: 0"
+                />
+              </div>
+              <div style="height: 40px; background-color: white; margin-top: 0px"></div>
+              <div style="height: 30px; background-color: gray; margin-top: 0px"></div>
+            </div>
+            <div>
+              <div style="padding: 0; margin-bottom: 0px; height: 60%">
+                <img
+                  src="https://www.dbcut.com/data/file/websites/thumb-77529d4663656fa56a863b5b5b07e3c4_ulZ9jxLS_87b1a924b30ba7e114d984dbe8a004a12763dba7_270x152.png"
+                  alt=""
+                  width="100%"
+                  height="100%"
+                  title=""
+                  style="margin: 0; padding: 0"
+                />
+              </div>
+              <div style="height: 40px; background-color: white; margin-top: 0px"></div>
+              <div style="height: 30px; background-color: gray; margin-top: 0px"></div>
+            </div>
+            <div>
+              <div style="padding: 0; margin-bottom: 0px; height: 60%">
+                <img
+                  src="https://www.dbcut.com/data/file/websites/thumb-77529d4663656fa56a863b5b5b07e3c4_ulZ9jxLS_87b1a924b30ba7e114d984dbe8a004a12763dba7_270x152.png"
+                  alt=""
+                  width="100%"
+                  height="100%"
+                  title=""
+                  style="margin: 0; padding: 0"
+                />
+              </div>
+              <div style="height: 40px; background-color: white; margin-top: 0px"></div>
+              <div style="height: 30px; background-color: gray; margin-top: 0px"></div>
+            </div>
+            <div>
+              <div style="padding: 0; margin-bottom: 0px; height: 60%">
+                <img
+                  src="https://www.dbcut.com/data/file/websites/thumb-77529d4663656fa56a863b5b5b07e3c4_ulZ9jxLS_87b1a924b30ba7e114d984dbe8a004a12763dba7_270x152.png"
+                  alt=""
+                  width="100%"
+                  height="100%"
+                  title=""
+                  style="margin: 0; padding: 0"
+                />
+              </div>
+              <div style="height: 40px; background-color: white; margin-top: 0px"></div>
+              <div style="height: 30px; background-color: gray; margin-top: 0px"></div>
+            </div>
+            <div>
+              <div style="padding: 0; margin-bottom: 0px; height: 60%">
+                <img
+                  src="https://www.dbcut.com/data/file/websites/thumb-77529d4663656fa56a863b5b5b07e3c4_ulZ9jxLS_87b1a924b30ba7e114d984dbe8a004a12763dba7_270x152.png"
+                  alt=""
+                  width="100%"
+                  height="100%"
+                  title=""
+                  style="margin: 0; padding: 0"
+                />
+              </div>
+              <div style="height: 40px; background-color: white; margin-top: 0px"></div>
+              <div style="height: 30px; background-color: gray; margin-top: 0px"></div>
+            </div>
+            <div>
+              <div style="padding: 0; margin-bottom: 0px; height: 60%">
+                <img
+                  src="https://www.dbcut.com/data/file/websites/thumb-77529d4663656fa56a863b5b5b07e3c4_ulZ9jxLS_87b1a924b30ba7e114d984dbe8a004a12763dba7_270x152.png"
+                  alt=""
+                  width="100%"
+                  height="100%"
+                  title=""
+                  style="margin: 0; padding: 0"
+                />
+              </div>
+              <div style="height: 40px; background-color: white; margin-top: 0px"></div>
+              <div style="height: 30px; background-color: gray; margin-top: 0px"></div>
+            </div>
+            <div>
+              <div style="padding: 0; margin-bottom: 0px; height: 60%">
+                <img
+                  src="https://www.dbcut.com/data/file/websites/thumb-77529d4663656fa56a863b5b5b07e3c4_ulZ9jxLS_87b1a924b30ba7e114d984dbe8a004a12763dba7_270x152.png"
+                  alt=""
+                  width="100%"
+                  height="100%"
+                  title=""
+                  style="margin: 0; padding: 0"
+                />
+              </div>
+              <div style="height: 40px; background-color: white; margin-top: 0px"></div>
+              <div style="height: 30px; background-color: gray; margin-top: 0px"></div>
+            </div>
+            <div>
+              <div style="padding: 0; margin-bottom: 0px; height: 60%">
+                <img
+                  src="https://www.dbcut.com/data/file/websites/thumb-77529d4663656fa56a863b5b5b07e3c4_ulZ9jxLS_87b1a924b30ba7e114d984dbe8a004a12763dba7_270x152.png"
+                  alt=""
+                  width="100%"
+                  height="100%"
+                  title=""
+                  style="margin: 0; padding: 0"
+                />
+              </div>
+              <div style="height: 40px; background-color: white; margin-top: 0px"></div>
+              <div style="height: 30px; background-color: gray; margin-top: 0px"></div>
+            </div>
+            <div>
+              <div style="padding: 0; margin-bottom: 0px; height: 60%">
+                <img
+                  src="https://www.dbcut.com/data/file/websites/thumb-77529d4663656fa56a863b5b5b07e3c4_ulZ9jxLS_87b1a924b30ba7e114d984dbe8a004a12763dba7_270x152.png"
+                  alt=""
+                  width="100%"
+                  height="100%"
+                  title=""
+                  style="margin: 0; padding: 0"
+                />
+              </div>
+              <div style="height: 40px; background-color: white; margin-top: 0px"></div>
+              <div style="height: 30px; background-color: gray; margin-top: 0px"></div>
+            </div>
+            <div>
+              <div style="padding: 0; margin-bottom: 0px; height: 60%">
+                <img
+                  src="https://www.dbcut.com/data/file/websites/thumb-77529d4663656fa56a863b5b5b07e3c4_ulZ9jxLS_87b1a924b30ba7e114d984dbe8a004a12763dba7_270x152.png"
+                  alt=""
+                  width="100%"
+                  height="100%"
+                  title=""
+                  style="margin: 0; padding: 0"
+                />
+              </div>
+              <div style="height: 40px; background-color: white; margin-top: 0px"></div>
+              <div style="height: 30px; background-color: gray; margin-top: 0px"></div>
+            </div>
+            <div>
+              <div style="padding: 0; margin-bottom: 0px; height: 60%">
+                <img
+                  src="https://www.dbcut.com/data/file/websites/thumb-77529d4663656fa56a863b5b5b07e3c4_ulZ9jxLS_87b1a924b30ba7e114d984dbe8a004a12763dba7_270x152.png"
+                  alt=""
+                  width="100%"
+                  height="100%"
+                  title=""
+                  style="margin: 0; padding: 0"
+                />
+              </div>
+              <div style="height: 40px; background-color: white; margin-top: 0px"></div>
+              <div style="height: 30px; background-color: gray; margin-top: 0px"></div>
+            </div>
+            <div>
+              <div style="padding: 0; margin-bottom: 0px; height: 60%">
+                <img
+                  src="https://www.dbcut.com/data/file/websites/thumb-77529d4663656fa56a863b5b5b07e3c4_ulZ9jxLS_87b1a924b30ba7e114d984dbe8a004a12763dba7_270x152.png"
+                  alt=""
+                  width="100%"
+                  height="100%"
+                  title=""
+                  style="margin: 0; padding: 0"
+                />
+              </div>
+              <div style="height: 40px; background-color: white; margin-top: 0px"></div>
+              <div style="height: 30px; background-color: gray; margin-top: 0px"></div>
+            </div>
+            <div>
+              <div style="padding: 0; margin-bottom: 0px; height: 60%">
+                <img
+                  src="https://www.dbcut.com/data/file/websites/thumb-77529d4663656fa56a863b5b5b07e3c4_ulZ9jxLS_87b1a924b30ba7e114d984dbe8a004a12763dba7_270x152.png"
+                  alt=""
+                  width="100%"
+                  height="100%"
+                  title=""
+                  style="margin: 0; padding: 0"
+                />
+              </div>
+              <div style="height: 40px; background-color: white; margin-top: 0px"></div>
+              <div style="height: 30px; background-color: gray; margin-top: 0px"></div>
+            </div>
+            <div>
+              <div style="padding: 0; margin-bottom: 0px; height: 60%">
+                <img
+                  src="https://www.dbcut.com/data/file/websites/thumb-77529d4663656fa56a863b5b5b07e3c4_ulZ9jxLS_87b1a924b30ba7e114d984dbe8a004a12763dba7_270x152.png"
+                  alt=""
+                  width="100%"
+                  height="100%"
+                  title=""
+                  style="margin: 0; padding: 0"
+                />
+              </div>
+              <div style="height: 40px; background-color: white; margin-top: 0px"></div>
+              <div style="height: 30px; background-color: gray; margin-top: 0px"></div>
+            </div>
+            <div>
+              <div style="padding: 0; margin-bottom: 0px; height: 60%">
+                <img
+                  src="https://www.dbcut.com/data/file/websites/thumb-77529d4663656fa56a863b5b5b07e3c4_ulZ9jxLS_87b1a924b30ba7e114d984dbe8a004a12763dba7_270x152.png"
+                  alt=""
+                  width="100%"
+                  height="100%"
+                  title=""
+                  style="margin: 0; padding: 0"
+                />
+              </div>
+              <div style="height: 40px; background-color: white; margin-top: 0px"></div>
+              <div style="height: 30px; background-color: gray; margin-top: 0px"></div>
+            </div>
+            <div>
+              <div style="padding: 0; margin-bottom: 0px; height: 60%">
+                <img
+                  src="https://www.dbcut.com/data/file/websites/thumb-77529d4663656fa56a863b5b5b07e3c4_ulZ9jxLS_87b1a924b30ba7e114d984dbe8a004a12763dba7_270x152.png"
+                  alt=""
+                  width="100%"
+                  height="100%"
+                  title=""
+                  style="margin: 0; padding: 0"
+                />
+              </div>
+              <div style="height: 40px; background-color: white; margin-top: 0px"></div>
+              <div style="height: 30px; background-color: gray; margin-top: 0px"></div>
+            </div>
+            <div>
+              <div style="padding: 0; margin-bottom: 0px; height: 60%">
+                <img
+                  src="https://www.dbcut.com/data/file/websites/thumb-77529d4663656fa56a863b5b5b07e3c4_ulZ9jxLS_87b1a924b30ba7e114d984dbe8a004a12763dba7_270x152.png"
+                  alt=""
+                  width="100%"
+                  height="100%"
+                  title=""
+                  style="margin: 0; padding: 0"
+                />
+              </div>
+              <div style="height: 40px; background-color: white; margin-top: 0px"></div>
+              <div style="height: 30px; background-color: gray; margin-top: 0px"></div>
+            </div>
+            <div>
+              <div style="padding: 0; margin-bottom: 0px; height: 60%">
+                <img
+                  src="https://www.dbcut.com/data/file/websites/thumb-77529d4663656fa56a863b5b5b07e3c4_ulZ9jxLS_87b1a924b30ba7e114d984dbe8a004a12763dba7_270x152.png"
+                  alt=""
+                  width="100%"
+                  height="100%"
+                  title=""
+                  style="margin: 0; padding: 0"
+                />
+              </div>
+              <div style="height: 40px; background-color: white; margin-top: 0px"></div>
+              <div style="height: 30px; background-color: gray; margin-top: 0px"></div>
+            </div>
+          </div>
+          <div></div>
+        </div>
+        <div style="margin-left: 40px">
+          <div>
+            <div
+              style="
+                background-color: #f6f9fa;
+                border: 1px solid rgb(221, 221, 221);
+                height: 200px;
+                width: 300px;
+                margin-top: 15px;
+                display: flex;
+                text-align: center;
+                display: table;
+              "
+            >
+              <div>
+                <div style="display: flex">
+                  <div style="margin-top: 10px; margin-left: 20px">
+                    <div>
+                      <input
+                        type="text"
+                        style="border-bottom: 0; height: 25px; border: 1px solid rgb(208, 208, 208)"
+                        placeholder="아이디"
+                      />
+                    </div>
+                    <div>
+                      <input
+                        type="text"
+                        style="height: 25px; border: 1px solid rgb(208, 208, 208)"
+                        placeholder="패스워드"
+                      />
+                    </div>
+                  </div>
+                  <div style="margin-top: 10px">
+                    <button
+                      style="
+                        padding: 10px;
+                        height: 60px;
+                        width: 90px;
+                        background-color: #3498db;
+                        border: 0px;
+                        color: white;
+                      "
+                    >
+                      로그인
+                    </button>
+                  </div>
+                </div>
+                <div style="margin-top: 20px">
+                  <div style="float: left">
+                    <input type="checkbox" />
+                    <span>자동로그인</span>
+                  </div>
+                  <div style="float: right">
+                    <a href="#">회원가입</a>
+                    <span>/</span>
+                    <a href="#">계정찾기</a>
+                  </div>
+                </div>
+              </div>
+              <div
+                style="
+                  clear: both;
+                  margin-top: 60px;
+                  width: 100%;
+                  margin-left: 0px;
+                  padding-left: 0px;
+                "
+              >
+                <hr />
+              </div>
+              <div style="display: flex">
+                <a
+                  href="https://www.dbcut.com/plugin/social/popup.php?provider=naver&amp;url=%2F"
+                  class="sns-icon social_link sns-naver2"
+                  title="네이버"
+                  style="
+                    display: block;
+                    width: 120px;
+                    background-color: #20c801;
+                    height: 30px;
+                    display: flex;
+                    align-items: center;
+                    text-align: center;
+                    margin-left: 30px;
+                  "
+                >
+                  <span
+                    style="
+                      color: white;
+                      font-weight: 900;
+                      text-decoration: none;
+                      text-align: center;
+                      margin-left: 55px;
+                    "
+                    >N</span
+                  >
+                </a>
+                <a
+                  href="https://www.dbcut.com/plugin/social/popup.php?provider=naver&amp;url=%2F"
+                  class="sns-icon social_link sns-naver2"
+                  title="카카오톡"
+                  style="
+                    display: block;
+                    width: 120px;
+                    background-color: #ffeb01;
+                    height: 30px;
+                    display: flex;
+                    align-items: center;
+                    text-align: center;
+                    margin-left: 10px;
+                  "
+                >
+                  <span
+                    style="
+                      color: white;
+                      font-weight: 900;
+                      text-decoration: none;
+                      text-align: center;
+                      margin-left: 55px;
+                    "
+                    >N</span
+                  >
+                </a>
+              </div>
+            </div>
+          </div>
+          <div
+            style="
+              border: 1px solid gray;
+              width: 300px;
+              height: 160px;
+
+              margin-top: 20px;
+              background-color: white;
+            "
+          >
+            <div style="width: 100%; height: 40px; background-color: #20c801"></div>
+            <div style="font-size: 14px; padding-left: 16px; margin-top: 8px">
+              <p class="noti_post">일반 회원 가입 오류 수정했습니다.</p>
+              <p class="noti_post">정책 위반 관련 쪽지 확인 부탁드립니다.</p>
+              <p class="noti_post">매주 포인트 경매를 실시하겠습니다.</p>
+              <p class="noti_post">제작사를 알고 계신 경우 댓글로 정보 ...</p>
+            </div>
+          </div>
+          <div>
+            <img
+              style="margin-top: 20px"
+              src="https://tpc.googlesyndication.com/daca_images/simgad/9343107045746942585"
+              border="0"
+              width="300"
+              alt=""
+              class="img_ad"
+            />
+          </div>
+          <div
+            style="
+              border: 1px solid gray;
+              width: 300px;
+              height: 180px;
+
+              margin-top: 20px;
+              background-color: white;
+            "
+          >
+            <div style="width: 100%; height: 40px; background-color: #20c801">
+              <p style="margin: 0; padding-top: 10px">최근 등록된 게시글</p>
+            </div>
+            <div style="font-size: 14px; padding-left: 16px; margin-top: 8px">
+              <p class="noti_post">
+                <span class="board_gray">[자유게시판]</span>1:1 유지보수,홈페이지...
+              </p>
+              <p class="noti_post">
+                <span class="board_gray">[자유게시판]</span>브랜딩부터 홈페이지 제작...
+              </p>
+              <p class="noti_post"><span class="board_gray">[오픈/리뉴얼]</span>Stryds</p>
+              <p class="noti_post"><span class="board_gray">[오픈/리뉴얼]</span>Crosswire</p>
+              <p class="noti_post"><span class="board_gray">[오픈/리뉴얼]</span>소이정</p>
+              <p class="noti_post">
+                <span class="board_gray">[자유게시판]</span>폰트 찾을땐?!눈누를...
+              </p>
+            </div>
+          </div>
+          <div
+            style="
+              border: 1px solid gray;
+              width: 300px;
+              height: 180px;
+
+              margin-top: 20px;
+              background-color: white;
+            "
+          >
+            <div style="width: 100%; height: 40px; background-color: #20c801">
+              <p style="margin: 0; padding-top: 10px">최근 등록된 코멘트</p>
+            </div>
+            <div style="font-size: 14px; padding-left: 16px; margin-top: 8px">
+              <p class="noti_post"><span class="board_gray">[자유게시판]</span>http://www.su...</p>
+              <p class="noti_post"><span class="board_gray">[자유게시판]</span>good!</p>
+              <p class="noti_post"><span class="board_gray">[오픈/리뉴얼]</span>제작사: 301랩</p>
+              <p class="noti_post">
+                <span class="board_gray">[오픈/리뉴얼]</span>제작사: 제이브릭스
+              </p>
+              <p class="noti_post">
+                <span class="board_gray">[오픈/리뉴얼]</span>마우스 요소가 많아서 보...
+              </p>
+              <p class="noti_post">
+                <span class="board_gray">[자유게시판]</span>우와~ 메인이 신기하네요
+              </p>
+            </div>
+          </div>
+          <div style="margin-top: 20px">
+            <img
+              src="https://tpc.googlesyndication.com/simgad/17920726942555061801?sqp=4sqPyQQrQikqJwhfEAEdAAC0QiABKAEwCTgDQPCTCUgAUAFYAWBfcAJ4AcUBLbKdPg&amp;rs=AOga4qnFpTb3-eW-I9xzrAYipit2LuqIyw"
+              border="0"
+              width="300"
+              alt=""
+              class="img_ad"
+            />
+          </div>
+          <div
+            style="
+              border: 1px solid gray;
+              width: 300px;
+              height: 340px;
+              margin-top: 20px;
+              background-color: white;
+            "
+          >
+            <div style="width: 100%; height: 40px; background-color: #20c801">
+              <p style="margin: 0; padding-top: 10px">인기 게시글</p>
+            </div>
+            <div id="ranking" style="font-size: 14px; padding-left: 16px; margin-top: 8px">
+              <p class="noti_post">
+                <span class="ranking_numbering">1</span
+                ><span class="board_gray">[자유게시판]</span>http://www.su...
+              </p>
+              <p class="noti_post">
+                <span class="ranking_numbering">2</span
+                ><span class="board_gray">[자유게시판]</span>http://www.su...
+              </p>
+              <p class="noti_post">
+                <span class="ranking_numbering">3</span
+                ><span class="board_gray">[자유게시판]</span>http://www.su...
+              </p>
+              <p class="noti_post">
+                <span class="ranking_numbering">4</span
+                ><span class="board_gray">[자유게시판]</span>http://www.su...
+              </p>
+              <p class="noti_post">
+                <span class="ranking_numbering">5</span
+                ><span class="board_gray">[자유게시판]</span>http://www.su...
+              </p>
+              <p class="noti_post">
+                <span class="ranking_numbering">6</span
+                ><span class="board_gray">[자유게시판]</span>http://www.su...
+              </p>
+              <p class="noti_post">
+                <span class="ranking_numbering">7</span
+                ><span class="board_gray">[자유게시판]</span>http://www.su...
+              </p>
+              <p class="noti_post">
+                <span class="ranking_numbering">8</span
+                ><span class="board_gray">[자유게시판]</span>http://www.su...
+              </p>
+              <p class="noti_post">
+                <span class="ranking_numbering">9</span
+                ><span class="board_gray">[자유게시판]</span>http://www.su...
+              </p>
+              <p class="noti_post">
+                <span class="ranking_numbering">10</span
+                ><span class="board_gray">[자유게시판]</span>http://www.su...
+              </p>
+            </div>
+          </div>
+          <div style="margin-top: 20px">
+            <img
+              src="https://tpc.googlesyndication.com/simgad/17920726942555061801?sqp=4sqPyQQrQikqJwhfEAEdAAC0QiABKAEwCTgDQPCTCUgAUAFYAWBfcAJ4AcUBLbKdPg&amp;rs=AOga4qnFpTb3-eW-I9xzrAYipit2LuqIyw"
+              border="0"
+              width="300"
+              alt=""
+              class="img_ad"
+            />
+          </div>
+          <div>
+            <div style="width: 100%; height: 40px; background-color: #20c801">
+              <p style="margin: 0; padding-top: 10px">접속자 집계</p>
+            </div>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr">
+              <div><span>오늘</span><span>2,399</span></div>
+              <div><span>어제</span><span>2,601</span></div>
+              <div><span>최대</span><span>2,902</span></div>
+              <div><span>전체</span><span>477,958</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <footer></footer>
+</html>
