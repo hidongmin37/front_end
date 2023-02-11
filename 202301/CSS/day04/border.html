@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>border</title>
+    <style>
+      div {
+        width: 300px;
+        height: 300px;
+        background-color: #333;
+        margin: 16px 0;
+      }
+      #border {
+        border: 1px solid #f00;
+        border: 10px dashed #f00;
+        border: 10px dotted #f00;
+        border: 10px double #f00;
+        border: none;
+        border-bottom: none;
+        /* 방향설정하고 겹쳤을 때 상쇄여부 */
+        /* border-collapse: collapse; */
+      }
+      input {
+        border: none;
+        background-color: greenyellow;
+        /* border: 1px solid #f00; */
+      }
+      #radius {
+        border-radius: 14px 6px 30px 10px / 19px 3px 50px 12px;
+        border-radius: 5%;
+        border-radius: 160px/ 8px;
+        border-radius: 0 0 0 32px;
+      }
+      table,
+      th,
+      td {
+        border: 1px solid #000;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="text" />
+    <div id="border"></div>
+    <div id="radius"></div>
+    <table border="1" style="border-collapse: collapse">
+      <thead>
+        <tr>
+          <th>번호</th>
+          <th>제목</th>
+          <th>조회수</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>안녕하세요</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>안녕하세요</td>
+          <td>21</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

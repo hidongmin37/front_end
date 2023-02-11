@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>디스플레이_2</title>
+    <style>
+      div {
+        background-color: #333;
+        color: #fff;
+        margin: 16px;
+      }
+      .display {
+        display: none;
+      }
+      .visibility {
+        visibility: hidden;
+      }
+      .opacity {
+        opacity: 0;
+      }
+      /* display none
+        영역 x, 클릭 x
+
+      visibility:hidden(visible도 있음)
+        영역o,클릭x
+      opacity0(0~1)
+       영역 o ,클릭 o 
+      ####주의 
+        opacity는 안에 있는 내용믈(컨텐츠)더 
+        투명하게 만들기 때문에 배경색을 투명하게 만들때는 opacity 
+        아니라 rgba를 사용하는 것이 좋다.
+      */
+      button {
+        padding: 16px;
+        /* background-color: skyblue;
+         */
+        background-color: transparent;
+        color: black;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+      }
+      button:hover {
+        opacity: 0.7;
+      }
+      button:disabled {
+        background-color: #999;
+        color: #333;
+        opacity: 0.7;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <p>display: none 속성은 사용자 화면에서 사라집니다.</p>
+      <p class="display">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias, voluptatibus unde fuga
+        accusamus voluptates dignissimos, repellendus, libero numquam doloremque magni dolore aut
+        repellat suscipit perspiciatis mollitia earum iste? Aliquid, obcaecati?
+      </p>
+    </div>
+    <div>
+      <p>visibility: hidden 사용자 화면에서 사라집니다.</p>
+      <p class="visibility">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias, voluptatibus unde fuga
+        accusamus voluptates dignissimos, repellendus, libero numquam doloremque magni dolore aut
+        repellat suscipit perspiciatis mollitia earum iste? Aliquid, obcaecati?
+      </p>
+    </div>
+    <div>
+      <p>opacity:0 속성은 사용자 화면에서 사라집니다.</p>
+      <p class="opacity">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias, voluptatibus unde fuga
+        accusamus voluptates dignissimos, repellendus, libero numquam doloremque magni dolore aut
+        repellat suscipit perspiciatis mollitia earum iste? Aliquid, obcaecati?
+      </p>
+    </div>
+    <button>로그인</button>
+  </body>
+</html>
