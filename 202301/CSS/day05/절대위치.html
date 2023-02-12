@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>절대위치</title>
+    <style>
+      #wrapper {
+        /* position: relative; */
+        width: 500px;
+        height: 500px;
+        border: 3px solid #f00;
+        top: 200px;
+        left: 300px;
+      }
+      .box {
+        width: 50px;
+        height: 50px;
+        background-color: #0008ffcb;
+        color: #fff;
+        position: absolute;
+      }
+      /* position absolute를 주는 순간 끝에 위치하게 됨 주변에 뭐가 있든 */
+      .ab1 {
+        top: 0;
+        right: 0;
+      }
+      .ab2 {
+        bottom: 0;
+        left: 0;
+      }
+      .ab3 {
+        top: 200px;
+        left: 200px;
+      }
+      .ab4 {
+        bottom: 100px;
+        right: 100px;
+      }
+      #alert {
+        width: 300px;
+        height: 200px;
+        background-color: aquamarine;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        /* 내크기의 50%만큼 위로 그리고 50%만큼 왼쪽으로 이동시킨 것 */
+      }
+      /* wrapper의 속성값이 relative냐 아니냐에 따라 그 밑에 자식요소의위치는 바뀐다. */
+    </style>
+  </head>
+  <body>
+    <div id="alert"></div>
+    <h2>절대 위치 지정방식</h2>
+    <div id="wrapper">
+      <div class="box ab1">1</div>
+      <div class="box ab2">2</div>
+      <div class="box ab3">3</div>
+      <div class="box ab4">4</div>
+    </div>
+  </body>
+</html>

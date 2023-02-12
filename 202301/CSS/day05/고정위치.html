@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>고정위치</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      header {
+        position: fixed;
+        width: 100%;
+        height: 100px;
+        background-color: aqua;
+      }
+      main {
+        padding-top: 100px;
+        height: 200vh;
+        /* postion flexd는 다른 요소와 겹치는 속성이 있기 때문에
+        padding을 주어 컨텐츠를 fixed 요소 크기만큼 이동시킨다. */
+      }
+      aside {
+        width: 100px;
+        height: 500px;
+        background-color: #010757;
+        position: fixed;
+        top: 30%;
+        right: 5%;
+      }
+      #modal_background {
+        background-color: rgba(0, 0, 0, 0.7); /*안에 있는 색상은 투명해지지 않고,*/
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        color: white;
+        z-index: 1;
+        /* opacity: 30%; 안에 있는 컨텐츠도 투명해짐 */
+
+        /*
+        백단위 혹은 천단위로 z index
+        기본값은 0
+        숫자가 높을수록 해당 요소가 위로 올라옴
+        겹치는 요소와 비교하여*/
+      }
+    </style>
+  </head>
+  <body>
+    <div id="modal_background">안녕하세요 여러분</div>
+    <aside></aside>
+    <header></header>
+    <main>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis voluptatum praesentium a, alias
+      sequi odit recusandae tenetur porro illo inventore distinctio vel at et unde quas fugiat
+      aperiam natus. Ratione.
+    </main>
+  </body>
+</html>
