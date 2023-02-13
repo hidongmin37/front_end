@@ -4,46 +4,96 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>flex_2</title>
+    <title>플렉스_2</title>
     <style>
       * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
       }
-      header {
-        width: 100%;
-        height: 100px;
-        background-color: chocolate;
+      body {
+        position: relative;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* justify-content: space-between; */
       }
-      .flex_center {
+
+      .flex-center {
         display: flex;
         justify-content: center;
         align-items: center;
       }
-      .flex_align_center {
+
+      .flex-align-center {
         display: flex;
         align-items: center;
       }
+
       div {
         width: 380px;
         padding: 16px;
-        background-color: #e7e7e7;
+        background-color: blue;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 100;
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+
+        justify-content: center;
+        align-items: center;
+      }
+
+      header {
+        width: 100%;
+        height: 100px;
+        background-color: rgb(29, 198, 255);
+      }
+      footer {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 300px;
+        background-color: gold;
+        z-index: 10;
       }
     </style>
   </head>
   <body>
+    <!--
+        과제
+
+        해당 화면이 사용자 화면에 맞도록 한 화면에 가득차야함
+        footer는 항상 맨아래 위치
+
+        회원가입 요소는 main 요소의 가운데에 위치
+        회원가입 요소 안에 있는 form 데이터 (input 역시)
+        가운데 정렬 되어있어야한다
+
+        form 요소의 크기는 280px이며
+        form 요소 내부에 있는 input들 역시 수직,수평 가운데 정렬
+    -->
     <header></header>
-    <main></main>
-    <div>
-      <h2>회원가입</h2>
-      <form>
-        <p><input type="text" /></p>
-        <p><input type="text" /></p>
-        <p><input type="text" /></p>
-        <p><button>회원가입</button></p>
-      </form>
-    </div>
+    <main>
+      <div>
+        <h2>회원가입</h2>
+        <form style="width: 280px; background-color: red">
+          <p><input /></p>
+          <p><input /></p>
+          <p><input /></p>
+          <p><button>회원가입</button></p>
+        </form>
+      </div>
+    </main>
     <footer></footer>
   </body>
 </html>
