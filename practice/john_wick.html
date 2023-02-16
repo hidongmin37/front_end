@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Document</title>
+    <style>
+      html {
+        margin: 0;
+        width: 1420px;
+        height: 100vh;
+        background: linear-gradient(
+            to left,
+            rgba(20, 20, 20, 0) 10%,
+            rgba(20, 20, 20, 0.25) 25%,
+            rgba(20, 20, 20, 0.5) 50%,
+            rgba(20, 20, 20, 0.75) 75%,
+            rgba(20, 20, 20, 0.78) 100%
+          ),
+          url('./john_wick_image/jw1.jpeg') no-repeat center center fixed;
+        background-size: cover;
+        /* background: url('./john_wick_image/jw1.jpeg') no-repeat 50% 50% fixed; */
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+      }
+      * {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 400;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      #header_line {
+        display: flex;
+        height: 80px;
+        align-items: center;
+        padding-left: 40px;
+        width: 100%;
+      }
+      #header_tab {
+        margin-left: 150px;
+        width: 400px;
+        white-space: nowrap;
+      }
+      #header_tab > p {
+        display: inline-block;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 600;
+        color: white;
+        margin-right: 20px;
+        font-size: 18px;
+      }
+
+      #header_tab > p:hover {
+        color: red;
+      }
+
+      .menu {
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        max-width: 0;
+        transition: 0.5s ease;
+        z-index: 1;
+        background-color: #eee;
+      }
+
+      .burger-icon {
+        cursor: pointer;
+        display: inline-block;
+        z-index: 2;
+        padding: 8px 0;
+        position: relative;
+        left: 700px;
+        user-select: none;
+        width: auto;
+        margin: 0;
+      }
+
+      .burger-icon .burger-sticks {
+        background: white;
+        display: block;
+        height: 2px;
+        position: relative;
+        transition: background 0.2s ease-out;
+        width: 18px;
+      }
+
+      .burger-icon .burger-sticks:before,
+      .burger-icon .burger-sticks:after {
+        background: white;
+        content: '';
+        display: block;
+        height: 100%;
+        position: absolute;
+        transition: all 0.2s ease-out;
+        width: 100%;
+      }
+
+      .burger-icon .burger-sticks:before {
+        top: 5px;
+      }
+
+      .burger-icon .burger-sticks:after {
+        top: -5px;
+      }
+
+      .burger-check {
+        display: none;
+      }
+
+      .burger-check:checked ~ .menu {
+        max-width: 200px;
+      }
+
+      .burger-check:checked ~ .burger-icon .burger-sticks {
+        background: transparent;
+      }
+
+      .burger-check:checked ~ .burger-icon .burger-sticks:before {
+        transform: rotate(-45deg);
+      }
+
+      .burger-check:checked ~ .burger-icon .burger-sticks:after {
+        transform: rotate(45deg);
+      }
+
+      .burger-check:checked ~ .burger-icon:not(.steps) .burger-sticks:before,
+      .burger-check:checked ~ .burger-icon:not(.steps) .burger-sticks:after {
+        top: 0;
+      }
+      #sub_title {
+        color: white;
+        font-size: 24px;
+        font-weight: 400;
+        margin-bottom: 30px;
+      }
+      #info {
+        display: flex;
+        color: white;
+      }
+      #btn_dir {
+        display: flex;
+      }
+      #btn_dir button {
+        display: inline-block;
+        margin-right: 50px;
+        width: 200px;
+        height: 50px;
+        background-color: transparent;
+        color: white;
+        border: 1px solid white;
+        border-radius: 32px;
+        font-weight: 600;
+        cursor: pointer;
+      }
+      footer {
+        height: 300px;
+        width: 100%;
+        display: flex;
+        padding-left: 80px;
+      }
+      footer > div {
+        margin-right: 70px;
+        position: relative;
+      }
+      footer > div > img {
+        width: 40px;
+        position: absolute;
+        top: 290px;
+        padding-bottom: 30px;
+        padding-left: 10px;
+      }
+      #long_text {
+        color: white;
+        width: 700px;
+        margin-bottom: 30px;
+      }
+      #logo {
+        margin-bottom: 30px;
+      }
+      main {
+        padding-top: 80px;
+        padding-left: 150px;
+        height: 400px;
+        display: flex;
+        width: 100vw;
+      }
+      /* #background_img {
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+      } */
+      ul {
+        list-style: none;
+        margin-bottom: 90px;
+      }
+      ul li {
+        margin-right: 17px;
+      }
+      strong {
+        font-weight: 700;
+        display: inline-block;
+        margin-right: 10px;
+      }
+      #trailer {
+        color: white;
+        writing-mode: vertical-lr;
+        transform: rotate(180deg);
+        font-size: 18px;
+        position: relative;
+        bottom: 63px;
+        left: 480px;
+      }
+      .arrow {
+        position: relative;
+      }
+      @keyframes slidein {
+        from {
+          margin-right: 15px;
+        }
+
+        to {
+          margin-right: 25px;
+        }
+      }
+      .arrow::after {
+        animation-duration: 0.6s;
+        animation-name: slidein;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        position: fixed;
+        right: 15px;
+        top: 375px;
+        content: '';
+        width: 10px; /* 사이즈 */
+        height: 10px; /* 사이즈 */
+        border-top: 3px solid #ffffff; /* 선 두께 */
+        border-right: 3px solid #ffffff; /* 선 두께 */
+        transform: rotate(225deg); /* 각도 */
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div id="header_line">
+        <div>
+          <img src="./john_wick_image/johnwicklogo.png" height="40px" width="40px" alt="" />
+        </div>
+        <div id="header_tab">
+          <p style="color: red">HOME</p>
+          <p>CHARACTER</p>
+          <p>GALLERY</p>
+        </div>
+        <div id="hamburger">
+          <input class="burger-check" type="checkbox" id="burger-check" /><label
+            class="burger-icon"
+            for="burger-check"
+            ><span class="burger-sticks"></span
+          ></label>
+          <div class="menu">
+            <div style="width: 100px; color: black">
+              <span style="color: blue">1조화이팅</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div>
+        <div id="logo">
+          <img src="./john_wick_image/johnwicktitle.png" width="480px" alt="" />
+        </div>
+        <div id="sub_title">
+          <p>CHAPTER1 - JOHN WICK</p>
+        </div>
+        <div>
+          <p id="long_text">
+            I shouldn't have touched him. Revenge against enemies who chose the wrong person!John
+            Wick, a killer called a legend, retires from the world of crime by meeting his beloved
+            woman and getting married. Happiness is also briefly delivered as a gift to his wife
+            before she dies. Then one day, unidentified men rush into his house...
+          </p>
+        </div>
+        <div>
+          <ul id="info">
+            <li><strong>Release</strong>2015, January 21</li>
+            <li><strong>Director</strong>Chad Stahelski</li>
+            <li><strong>Genre</strong>Action, Thriller</li>
+          </ul>
+        </div>
+        <div id="btn_dir">
+          <button>WATCH</button>
+          <button>READ MORE</button>
+        </div>
+      </div>
+      <div id="trailer">TRAILER</div>
+      <div class="arrow"></div>
+    </main>
+    <footer>
+      <div>
+        <img src="./john_wick_image/footer-facebook.png" alt="" />
+      </div>
+      <div>
+        <img src="./john_wick_image/footer-youtube.png" alt="" />
+      </div>
+      <div>
+        <img src="./john_wick_image/footer-twitter.png" alt="" />
+      </div>
+    </footer>
+  </body>
+</html>
