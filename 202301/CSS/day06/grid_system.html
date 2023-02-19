@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        display: grid;
+        grid-template-columns: 2fr 100px 1fr;
+        grid-template-rows: 100px 300px 100px 100px;
+        grid-template-areas:
+          'header header header'
+          'main main aside'
+          /* 'main . aside' */
+          /* 공백은 . 으로 할 수 있다. */
+          'footer footer footer';
+        /* 위와 아래는 같다 */
+        grid-template:
+          'header header header' 100px
+          'main . . ' 300px
+          'main . aside' 100px
+          /* 'main . aside' */
+          /* 공백은 . 으로 할 수 있다. */
+          'footer footer footer' 100px/ 2fr 300px 1fr;
+      }
+
+      header {
+        grid-area: header;
+        background-color: blueviolet;
+      }
+      main {
+        grid-area: main;
+        background-color: brown;
+      }
+      aside {
+        grid-area: aside;
+        background-color: #0066ff;
+      }
+      footer {
+        background-color: deepskyblue;
+        grid-area: footer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header></header>
+      <main></main>
+      <aside></aside>
+      <footer></footer>
+    </div>
+  </body>
+</html>

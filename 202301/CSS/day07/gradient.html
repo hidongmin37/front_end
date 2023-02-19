@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>그라데이션</title>
+    <style>
+      div {
+        width: 360px;
+        height: 148px;
+        border-radius: 16px;
+      }
+      .gradient-1 {
+        background: linear-gradient(to left, transparent 90%, #f00);
+        background: linear-gradient(red, orange, yellow, green, blue, navy, violet);
+        background: linear-gradient(to top, red 50%, transparent 50%);
+        background: linear-gradient(
+          to top left,
+          red,
+          orange 45%,
+          yellow,
+          green,
+          blue,
+          navy,
+          violet
+        );
+      }
+      .gradient-2 {
+        background: radial-gradient(ellipse at left, #f00, transparent);
+        /* ellipse는 타원형
+        circle은 원형 */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="gradient-1"></div>
+    <div class="gradient-2"></div>
+  </body>
+</html>
