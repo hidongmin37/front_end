@@ -29,3 +29,8 @@ console.log(++a);
 console.log(++a);
 console.log(a++); //연산 후에 값을 더하기 때문에 기존 7을직어주고 연산다음부터는 8로 할당이 된다.
 console.log(a);
+console.log(aw++);
+
+function a(number) {
+  if (typeof number !== 'number') return;
+}
